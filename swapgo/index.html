@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap&Go - The Future of EV Charging</title>
+    <meta name="description" content="Experience the future of EV charging. Swap your battery in under 5 minutes with Swap&Go's revolutionary robotic stations.">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Swap<span>&</span>Go</a>
+            <nav>
+                <ul>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#technology">Technology</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#network" class="btn btn-outline">Find a Station</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section id="hero">
+        <video autoplay muted loop playsinline id="background-video">
+            <source src="coverr-temp-gqiha-tracking-shot-following-a-tesla-car-as-it-smoothly-navigates-a-highway-at-night-the-camera-moves-alongside-the-car-capturing-the-sleek-design-and-the-bright-glow-of-its-headlights-illuminating-the-road-ahead-t-mp4-9661-108.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>The End of Waiting.</h1>
+            <p>Your EV, fully charged in under 5 minutes. Swap&Go's robotic stations are revolutionizing electric mobility.</p>
+            <div class="hero-buttons">
+                <a href="#technology" class="btn btn-primary">
+                    <span>Watch It In Action</span>
+                </a>
+                <a href="#network" class="btn btn-secondary">
+                    <span>Find a Station →</span>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="container section-padding">
+        <h2 class="section-title">Swap. Go. It's That Simple.</h2>
+        <div class="steps-container">
+            <div class="step-card animate-on-scroll">
+                <div class="icon-wrapper">
+                    <i class="fas fa-map-location-dot"></i>
+                </div>
+                <h3>1. Drive In</h3>
+                <p>Use the Swap&Go app to find a station. Our system recognizes your vehicle upon arrival. No buttons, no hassle.</p>
+            </div>
+            <div class="step-card animate-on-scroll">
+                <div class="icon-wrapper">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>2. Auto-Swap</h3>
+                <p>Our precision robotic platform autonomously replaces your depleted battery with a 100% charged, health-certified one.</p>
+            </div>
+            <div class="step-card animate-on-scroll">
+                <div class="icon-wrapper">
+                    <i class="fas fa-road"></i>
+                </div>
+                <h3>3. Power On</h3>
+                <p>In less time than it takes to get a coffee, you're back on the road. Payment is handled automatically through the app.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="section-padding">
+        <div class="container">
+            <div class="benefit-row animate-on-scroll">
+                <div class="benefit-image" data-parallax="0.3">
+                    <img src="https://images.unsplash.com/photo-1617886322207-6f504e7472c5?q=80&w=800" alt="Robotic arm precision technology" loading="lazy">
+                </div>
+                <div class="benefit-text">
+                    <h3>Time is Your Ultimate Luxury.</h3>
+                    <p>Why spend 45 minutes tethered to a charging cable? At Swap&Go, a full charge is a pit stop, not a long layover. Reclaim your day and get where you're going, faster.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> Sub-5 minute swaps</li>
+                        <li><i class="fas fa-check-circle"></i> Zero wait times</li>
+                        <li><i class="fas fa-check-circle"></i> Fully autonomous process</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="benefit-row animate-on-scroll">
+                <div class="benefit-image" data-parallax="0.3">
+                    <img src="family_on_a_roadtrip.jpeg" alt="Family enjoying road trip" loading="lazy">
+                </div>
+                <div class="benefit-text">
+                    <h3>Erase Range Anxiety. Forever.</h3>
+                    <p>Long journeys are no longer a complex puzzle of charging stops. Our rapidly expanding network means a fresh battery is always within reach, giving you the freedom to explore without limits.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> 250+ stations nationwide</li>
+                        <li><i class="fas fa-check-circle"></i> Strategic highway placement</li>
+                        <li><i class="fas fa-check-circle"></i> 24/7 availability</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="technology" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">The Brains Behind the Charge</h2>
+            <div class="tech-grid">
+                <div class="tech-item tech-featured animate-on-scroll">
+                    <i class="fas fa-gears"></i>
+                    <h4>Precision Robotics</h4>
+                    <p>Millimeter-accurate robotic arms powered by advanced computer vision ensure a safe, secure swap every time. Our proprietary alignment system achieves 99.99% success rate.</p>
+                </div>
+                <div class="tech-item animate-on-scroll">
+                    <i class="fas fa-charging-station"></i>
+                    <h4>Smart Charging Pods</h4>
+                    <p>Climate-controlled bays that optimize battery health and longevity.</p>
+                </div>
+                <div class="tech-item animate-on-scroll">
+                    <i class="fas fa-brain"></i>
+                    <h4>AI-Powered Core</h4>
+                    <p>Network AI manages inventory and predicts demand to ensure availability.</p>
+                </div>
+                <div class="tech-item animate-on-scroll">
+                    <i class="fas fa-shield-halved"></i>
+                    <h4>Total Security</h4>
+                    <p>Secure vehicle authentication and encrypted, seamless payments.</p>
+                </div>
+            </div>
+
+            <div class="manufacturing-banner animate-on-scroll">
+                <div class="manufacturing-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <div class="manufacturing-content">
+                    <h3>Engineered & Manufactured in India</h3>
+                    <p>Our technology isn't just a concept—it's a reality built in <strong>Pune, Maharashtra</strong>. We combine world-class automotive talent with local innovation. Full-scale production of our 'S2' robotic pods began in Q4 2024.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Flexible Plans</h2>
+            <p class="section-subtitle">Operating on a "Battery as a Service" model, we give you the flexibility to choose how you pay for power.</p>
+            
+            <div class="pricing-grid animate-on-scroll">
+                <div class="pricing-card">
+                    <span class="plan-name">Pay-As-You-Go</span>
+                    <div class="price">₹1,800<span>/swap</span></div>
+                    <p class="text-muted">Perfect for occasional drivers</p>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Pay only when you swap</li>
+                        <li><i class="fas fa-check"></i> Access to all stations</li>
+                        <li><i class="fas fa-check"></i> No monthly commitment</li>
+                        <li><i class="fas fa-check"></i> Standard support</li>
+                    </ul>
+                    <a href="#" class="btn-price outline">Select Plan</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <span class="plan-name">The Explorer</span>
+                    <div class="price">₹5,000<span>/mo</span></div>
+                    <p class="text-muted">Great for daily commuters</p>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> <strong>4 Full Swaps</strong> included</li>
+                        <li><i class="fas fa-check"></i> Rollover unused swaps</li>
+                        <li><i class="fas fa-check"></i> Priority booking</li>
+                        <li><i class="fas fa-check"></i> Battery Health Report</li>
+                    </ul>
+                    <a href="#" class="btn-price fill">Start Free Trial</a>
+                </div>
+
+                <div class="pricing-card">
+                    <span class="plan-name">Freedom Plan</span>
+                    <div class="price">₹12,000<span>/mo</span></div>
+                    <p class="text-muted">For fleets & heavy users</p>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> <strong>Unlimited</strong> Swaps</li>
+                        <li><i class="fas fa-check"></i> Access to Super-Fast lanes</li>
+                        <li><i class="fas fa-check"></i> 24/7 Premium Support</li>
+                        <li><i class="fas fa-check"></i> Commercial invoice available</li>
+                    </ul>
+                    <a href="#" class="btn-price outline">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="section-padding">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item animate-on-scroll">
+                    <h3 class="stat-number" data-target="5000">0</h3>
+                    <p>Swaps Per Day</p>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <h3 class="stat-number" data-target="250">0</h3>
+                    <p>Active Stations</p>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <h3 class="stat-number" data-target="99.9">0</h3>
+                    <p>% Uptime</p>
+                </div>
+                <div class="stat-item animate-on-scroll">
+                    <h3 class="stat-number" data-target="4">0</h3>
+                    <p>Minutes Average</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="network" class="section-padding container">
+        <h2 class="section-title">Find Your Power</h2>
+        <p class="section-subtitle">Our network is growing daily. Find current and upcoming stations below.</p>
+        
+        <div id="map-container" style="height: 400px; width: 100%; border-radius: 20px; margin-bottom: 40px; border: 2px solid #00d26a; box-shadow: 0 0 20px rgba(0, 255, 255, 0.2); z-index: 1;"></div>
+
+        <div class="stations-grid animate-on-scroll">
+            <div class="station-card">
+                <div class="station-icon"><i class="fas fa-charging-station"></i></div>
+                <div class="station-info">
+                    <h4>Delhi</h4>
+                    <span class="station-status operational">Operational</span>
+                </div>
+                <div class="station-stats">
+                    <span><i class="fas fa-bolt"></i> 30 Bays</span>
+                </div>
+            </div>
+            
+            <div class="station-card">
+                <div class="station-icon"><i class="fas fa-charging-station"></i></div>
+                <div class="station-info">
+                    <h4>Mumbai Central</h4>
+                    <span class="station-status operational">Operational</span>
+                </div>
+                <div class="station-stats">
+                    <span><i class="fas fa-bolt"></i> 23 Bays</span>
+                </div>
+            </div>
+            
+            <div class="station-card">
+                <div class="station-icon"><i class="fas fa-charging-station"></i></div>
+                <div class="station-info">
+                    <h4>Hyderabad</h4>
+                    <span class="station-status operational">Operational</span>
+                </div>
+                <div class="station-stats">
+                    <span><i class="fas fa-bolt"></i> 14 Bays</span>
+                </div>
+            </div>
+            
+            <div class="station-card">
+                <div class="station-icon"><i class="fas fa-charging-station"></i></div>
+                <div class="station-info">
+                    <h4>Chennai</h4>
+                    <span class="station-status operational">Operational</span>
+                </div>
+                <div class="station-stats">
+                    <span><i class="fas fa-bolt"></i> 10 Bays</span>
+                </div>
+            </div>
+        </div>
+        
+        <h3 class="compatibility-title">Compatible With Leading EV Brands</h3>
+        <div class="logo-bar animate-on-scroll">
+            <span class="brand-logo">TESLA</span>
+            <span class="brand-logo">BYD</span>
+            <span class="brand-logo">FORD</span>
+            <span class="brand-logo">HYUNDAI</span>
+            <span class="brand-logo">MAHINDRA</span>
+        </div>
+    </section>
+
+    <section id="cta">
+        <div class="cta-background"></div>
+        <div class="container">
+            <h2>Join the EV Revolution. Again.</h2>
+            <p>Ready to experience the freedom of instant charging? Download the app.</p>
+            <div class="app-buttons">
+                <a href="#" class="btn-app">
+                    <i class="fab fa-apple"></i> 
+                    <span>Download on the App Store</span>
+                </a>
+                <a href="#" class="btn-app">
+                    <i class="fab fa-google-play"></i> 
+                    <span>Get it on Google Play</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Swap<span>&</span>Go</h4>
+                    <p>Revolutionizing electric mobility, one swap at a time.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Investors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Legal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Resources</h5>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Swap&Go Technologies Inc. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
